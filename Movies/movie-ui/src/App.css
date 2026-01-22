@@ -1,0 +1,373 @@
+body {
+  margin : 0;
+  background-color: #0d1117;
+}
+
+
+.navbar-brand img {
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-item-movies {
+  padding-left: 5px;
+  margin: 0 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  max-width: 400px;
+} 
+
+.search-dropdown {
+  max-width: 100%; 
+  max-height: 400px !important;
+  overflow-y: auto !important;
+  z-index: 1000 !important;
+}
+  
+.btn {
+  font-size: 15px;
+  padding: 0.375rem 0.5rem;
+}
+
+.btn-outline-success {
+  margin: 0 5px;
+  padding: 5px 12px;
+  background-color: transparent;
+  color:dodgerblue;
+  border-color: dodgerblue;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color:cornflowerblue;
+  color: #0d1117;
+  border-color: dodgerblue;
+}
+.navbar-brand img {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+@media (max-width: 576px) {
+  .form-control {
+    width: 120px;
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .form-control {
+    width: 180px;
+  }
+}
+
+
+@media (min-width: 993px) {
+  .form-control {
+    width: 250px;
+  }
+}
+
+/* Hero Carousel Styles */
+#heroCarousel {
+  position: relative;
+  overflow: hidden;
+}
+
+#heroCarousel .carousel-item {
+  height: 75vh;
+  min-height: 450px;
+  max-height: 600px;
+}
+
+.carousel-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(13, 17, 23, 0.95) 0%, rgba(13, 17, 23, 0.7) 50%, rgba(13, 17, 23, 0.3) 100%);
+}
+
+.carousel-caption-custom {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  text-align: left;
+  max-width: 600px;
+  z-index: 10;
+}
+
+.carousel-caption-custom h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+.carousel-caption-custom .lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.show-more-link {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.show-more-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.carousel-caption-custom .movie-meta {
+  margin-bottom: 0.5rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-indicators {
+  bottom: 20px;
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 6px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  #heroCarousel .carousel-item {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .carousel-caption-custom {
+    left: 3%;
+    right: 3%;
+    max-width: 100%;
+  }
+
+  .carousel-caption-custom h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption-custom .lead {
+    font-size: 0.95rem;
+  }
+}
+
+/* Section Titles */
+.section-title {
+  color: dodgerblue;
+  font-weight: 600;
+}
+
+/* Movie Carousel */
+.movie-carousel-container {
+  position: relative;
+  padding: 0 50px;
+}
+
+.movie-carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 15px 5px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.movie-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-card-wrapper {
+  flex: 0 0 auto;
+  width: 180px;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: transparent;
+  border: none;
+  color: dodgerblue;
+  font-size: 2.5rem;
+  width: 45px;
+  height: 80px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+}
+
+.carousel-arrow:hover {
+  background: rgba(30, 144, 255, 0.08);
+  color: #1e90ff;
+}
+
+.carousel-arrow-left {
+  left: 0;
+}
+
+.carousel-arrow-right {
+  right: 0;
+}
+
+/* Movie Cards */
+.movie-card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 2/3;
+  background-color: #1a1f2e;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.3);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 6px 6px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-card-overlay {
+  opacity: 1;
+}
+
+.movie-card-title {
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.movie-card-info {
+  display: flex;
+  align-items: center;
+}
+
+.movie-card-info .badge {
+  font-size: 0.6rem;
+  padding: 2px 4px;
+}
+
+.movie-card-info .small {
+  font-size: 0.6rem;
+}
+
+.show-more-card {
+  background: rgba(30, 144, 255, 0.07);
+  border: 2px dashed dodgerblue;
+  min-height: 100%;
+  transition: background 0.2s, border-color 0.2s;
+}
+.show-more-card:hover {
+  background: rgba(30, 144, 255, 0.15);
+  border-color: #1e90ff;
+}
+.show-more-text {
+  color: dodgerblue;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.footer-custom {
+  background: #161b22;
+  color: #e0e6ed;
+  border-top: 1px solid #23272f;
+  font-size: 1rem;
+}
+.footer-title {
+  font-weight: 600;
+  color: #4ea1ff;
+  font-size: 1.1rem;
+}
+.footer-contact {
+  color: #cfd8e3;
+  font-size: 0.98rem;
+}
+.footer-link {
+  color: #4ea1ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-link:hover {
+  text-decoration: underline;
+  color: #90c7ff;
+}
+.footer-links {
+  margin-bottom: 0.5rem;
+}
+.footer-copyright {
+  color: #b3c0d1;
+}
