@@ -55,3 +55,33 @@ local_settings.py
 
 # dotenv environment variables
 .env
+
+# Secrets, credentials, and sensitive config files
+*.env.*
+.envrc
+secrets.*
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.db
+*.sqlite3
+*.token
+*.session
+credentials.*
+config.json
+config.yaml
+config.yml
+
+# Hide any file or folder with 'API' in the name (case-insensitive)
+*API*
+*api*
+
+# Django settings file
+settings.py
+
+# Sensitive and user data files
+../.env
+datadump.json
+movies_backup.json
